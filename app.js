@@ -13,4 +13,4 @@ app.use(bodyParser.json());
 
 app.use(controller);
 
-app.listen(5000);
+app.listen(5000 || process.env.PORT);
