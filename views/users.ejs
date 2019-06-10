@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="/css/style1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h2 class="text">Credit Management Website</h2>
+    <div class="container">
+        <% if (users.length > 0) { %>
+            <div>
+                <% for (let user of users) { %>
+                    <div style="background-color:burlywood; border-radius: 5px; margin-top: 5px;">
+                        <p class="names"><%= user.name %></p>
+                        <a href="/details/<%= user.id %>" name="name" class="button">View Details</a>
+                    </div>
+                <% } %>
+            </div>
+                <% } else { %>
+                    <h3>No Users!</h3>
+                <% } %> 
+    </div>
+    
+    <input type="hidden" name="point" value="<%= users.points %>"/>
+</body>
+</html>

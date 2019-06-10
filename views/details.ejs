@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="/css/style1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div style="background-color:burlywood; border-radius: 5px; margin-top: 5px; margin-bottom: 10px;">
+        <p class="names">Name: <%= user.name %></p>
+        <p class="names">Email: <%= user.email %></p>
+        <p class="names">Points: <%= user.points %></p>
+    </div>
+
+    <form method="POST" action="/details/<%= user.id %>">
+    <select name="pick">
+    <option value="Devesh">Devesh</option>
+    <option value="Vikas">Vikas</option>
+    <option value="Sapna">Sapna</option>
+    <option value="Mandeep">Mandeep</option>
+    <option value="Pranaya">Pranaya</option>
+    <option value="Bhavya">Bhavya</option>
+    <option value="Akhil">Akhil</option>
+    <option value="Dhaval">Dhaval</option>
+    <option value="Amit">Amit</option>
+    <option value="Shubham">Shubham</option>
+    </select>
+    <input type="text" name="points" placeholder="enter points"/>
+    <input type="submit" class="button"/>
+    </form>
+    
+</body>
+</html>
